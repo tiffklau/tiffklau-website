@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="keywords" content="tiff, lau, portfolio, design, ux, ui, graphic, interaction, designer, vancouver, bc, tiffklau, front-end, developer, canada">
+        <meta name="author" content="Tiff Lau">
+        <title>Tiff K Lau Front-End Development Portfolio</title>
+        <meta name="description" content="Design Portfolio">
+        <link rel="icon" href="#">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="pagewrapper3">
+            <div>
+                <header>
+                    <div id="headerwrapper">
+                        <div id="tlogo">
+                            <a href="index.html"><img src="images/t-logo_100px.png" alt="logo" /></a>
+                        </div>
+                        <div id="headercontent">
+                                 <nav>
+                                      <ul>
+                                        <li class="one"><a href="index.html">Home</a></li><!--
+                                     --><li class="two"><a href="about.html">About</a></li><!--
+                                     --><li class="three"><a href="work.html">Work</a></li><!--
+                                     --><li class="four"><a href="connect.html">Connect</a></li>
+                                        <hr class="whr">
+                                      </ul>
+                                </nav>
+                            <div id="socialmedia">
+                                    <ul>
+                                        <li>
+                                            <a href="https://twitter.com/tiffklau" target="_blank">
+                                                <span class="zocial-twitter"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.linkedin.com/in/tiffklau" target="_blank">
+                                                <span class="zocial-linkedin"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <div class="mobile-nav">
+                            <div class="menu-btn" id="menu-btn">
+                                <div></div>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pop">
+                                <ul>
+                                    <li class="one"><a href="index.html">Home</a></li><!--
+                                 --><li class="two"><a href="about.html">About</a></li><!--
+                                 --><li class="three"><a href="work.html">Work</a></li><!--
+                                 --><li class="four"><a href="connect.html">Connect</a></li>
+                                </ul>
+                            </div>
+                </header>
+                <main id="workmain">
+                    <div class="filter">
+                            <span id="all" class="filter-select"><a href="work.html" class="slanted">All</a></span>
+                            <span id="uiux"><a href="uiux.html" class="slanted">UI/UX</a></span>
+                            <span id="frontend"><a href="frontend.html" class="slanted">Front-End Development</a></span>
+                            <span id="branding"><a href="branding.html" class="slanted">Brand Identity</a></span>
+                    </div>
+                    <section class="se-container">
+                        <div class="se-slope pawrawbox">
+                            <a href="pawrawbox.html">
+                                <div class="se-content">
+                                    <div>
+                                        <img src="images/pawrawlogo.png" alt="pawrawdog" id="prl" />
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="se-slope onebike">
+                            <a href="onebike.html">
+                                <div class="se-content">
+                                    <div><img src="images/bikelogo.png" alt="bike" id="bl" /></div>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                </main>
+
+
+                <footer>
+                    <p>Copyright &copy; 2015 Tiff Lau.</p>
+            <!--        <p id="email"><a href="mailto:tiff.k.lau@gmail.com">Email Me</a></p>  -->
+                </footer>
+            </div>
+        </div>
+
+        <script>
+            /* mobile menu */
+         $(document).ready(function(){
+                $("#menu-btn").click(function(){
+                    $("#pop").slideToggle("2500");
+                    $("#pop").addClass("pop-menu");
+                });
+            });
+        </script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-61937159-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Desk Graphic</title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="js/jquery.auderoSmokeEffect.js"></script>
+        <script src="js/jquery.allofthelights.js"></script>
+    </head>
+    
+    <body>
+        <div>
+            <img src="images/window.png" alt="window" id="window">
+        </div>
+        
+        <div>
+            <img src="images/desk-01.png" alt="desk">
+        </div>
+        
+        <div id="macbook">
+            <a href="#"></a>
+            <img src="images/sc1.png" alt="desktop" id="desktop" onclick="swap()" class="screen">
+        </div>
+        
+        <div id="smokeSpawnPoint">
+            <a href="#" id="mug"></a>
+        </div>
+    
+        <div>
+            <img src="images/book-01.png" alt="book">
+        </div>
+        
+        <div>
+            <img src="images/desklighton.png" alt="lamp" id="light" usemap="#imagemap">
+                <map name="imagemap">
+                    <area shape="poly" href="#" alt="lights" class="switch" onclick="changeImage()" coords="7,47,56,149,135,240,176,187,235,84,224,41,189,19,85,28,44,30"/>
+    </map>
+        </div>
+        
+        <div id="keep"></div>
+
+    <script>
+        <!--macbook-->
+        var images = ["images/sc1.png", "images/sc2.png", "images/sc3.png","images/sc4.png"];
+        var x = 0;
+        
+        function swap(){
+            document.getElementById("desktop").src=images[++x];
+            if (x==3){
+                x=-1;
+            }
+        };
+        
+        <!--mug-->
+        $(window).load(function () {
+           $("#mug").auderoSmokeEffect({
+              imagePath: "images/smoke6.png",
+               posX: 100,
+               posY: 50,
+               speed: 10000
+   });
+});
+        
+       $(window).load(setTimeout(function () {
+           $("#mug").auderoSmokeEffect({
+              imagePath: "images/smoke2.png",
+               posX: 90,
+               posY: 40,
+               speed: 10000
+   });
+} , 3000)   ); 
+
+       $(window).load(setTimeout(function () {
+           $("#mug").auderoSmokeEffect({
+              imagePath: "images/smoke6.png",
+               posX: 110,
+               posY: 50,
+               speed: 10000
+   });
+} , 6000)   ); 
+                 
+             $(window).load(setTimeout(function () {
+           $("#mug").auderoSmokeEffect({
+              imagePath: "images/smoke2.png",
+               posX: 100,
+               posY: 40,
+               speed: 10000
+   });
+} , 10000)   ); 
+        
+        <!--lights on and off-->
+            $(document).ready(function() {
+    $('.screen').allofthelights();
+});
+        
+    var image = document.getElementById("window");
+    function changeImage() {
+        image.src="images/windownight.png"
+    };
+    
+    $(document).on('click', "div#allofthelights_bg6", function(){
+                   var light = $(this).parent("div").attr("id");
+            image.src= "images/window.png";
+                   });
+    
+    </script>
+    </body>
+</html>

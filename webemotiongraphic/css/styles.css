@@ -1,0 +1,115 @@
+body {
+    background: url("../images/wallpaper-01.jpg") no-repeat;
+    width: 1380px;
+    height: 745px;
+}
+
+img[src*="window"] {
+    position:absolute;
+    top: -200px;
+    left: -250px;
+}
+
+img[src*="desk"] {
+    position:absolute; 
+    top: 420px;
+}
+
+div#macbook{
+    position:relative;
+}
+
+img[src*="sc"]{
+    width: 412px;
+    height:249px;
+    position: absolute;
+    top: 27px;
+    left: 111px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#macbook {
+    background-image: url("../images/macbookair-01.png");
+    background-repeat: no-repeat;
+    background-size: 600px 540px;
+    z-index: 0;
+    width: 600px;
+    height: 630px;
+    position: absolute;
+    top: 200px;
+    left: 450px;
+}
+
+#mug {
+    position:absolute;
+    top: 350px;
+    left: 270px;
+    width:190px;
+    height:220px;
+    z-index:1;
+    background:url("../images/mug-01.png") no-repeat;
+}
+
+#smoke{position:absolute;
+    top: 150px;
+    left: 180px;
+    width:391px;
+    height:395px;
+    z-index:1;
+    background:url("../images/sc4.png") no-repeat;}
+
+#smoke2{position:absolute;
+    top: 150px;
+    left: 150px;
+    width:391px;
+    height:395px;
+    z-index:1;
+    background:url("../images/smoke4.png") no-repeat;}
+
+#smoke3{position:absolute;
+    top: 150px;
+    left: 150px;
+    width:391px;
+    height:395px;
+    z-index:1;
+    background:url("../images/smoke5.png") no-repeat;}
+
+
+img[src*="book-01"] {
+    position:absolute;
+    width: 700px;
+    top: 420px;
+    left: -200px;
+}
+
+img#light {
+    position:absolute;
+    top: 0px;
+    left: 1000px;
+}
+
+.screen {z-index: 0;}
+
+#keep {
+    position:absolute;
+    top: 0px;
+    left: 1000px;
+    height:536px;
+    width: 442px;
+    background: url("../images/keepcalm-01.jpg") no-repeat;
+    background-size: 330px 400px;
+    z-index:-1;
+}
+
+/* smokepuff */
+
+.puff {
+	position: absolute;
+	width: 0px;
+	height: 0px;
+}

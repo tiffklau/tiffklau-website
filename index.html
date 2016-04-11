@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="keywords" content="tiff, lau, portfolio, design, ux, ui, graphic, interaction, designer, vancouver, bc, tiffklau, front-end, developer, canada">
+        <meta name="author" content="Tiff Lau">
+        <title>Tiff K Lau Design</title>
+        <meta name="description" content="Design Portfolio">
+        <link rel="shortcut icon" href="http://www.tiffklau.com/favicon.ico">
+        <link rel="icon" href="#">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script type="text/javascript" src="js/jquery-scrollto.js"></script>
+        <script type="text/javascript" src="js/jquery.viewportchecker.js"></script>
+
+    </head>
+    <body>
+        <div id="pagewrapper">
+            <header>
+                    <div id="headerwrapper">
+                        <div id="tlogo">
+                            <a href="index.html"><img src="images/t-logo_100px.png" alt="logo" /></a>
+                        </div>
+                        <div id="headercontent">
+                                 <nav>
+                                      <ul class="mainmenu">
+                                        <li class="one"><a href="index.html">Home</a></li><!--
+                                     --><li class="two"><a href="about.html">About</a></li><!--
+                                     --><li class="three">
+                                            <a href="work.html">Work</a>
+                                            
+                                        </li><!--
+                                     --><li class="four"><a href="connect.html">Connect</a></li>
+                                        <hr>
+                                      </ul>
+                                </nav>
+                            <div id="socialmedia">
+                                    <ul>
+                                        <li>
+                                            <a href="https://twitter.com/tiffklau" target="_blank">
+                                                <span class="zocial-twitter"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.linkedin.com/in/tiffklau" target="_blank">
+                                                <span class="zocial-linkedin"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <div class="mobile-nav">
+                            <div class="menu-btn" id="menu-btn">
+                                <div></div>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pop">
+                                <ul>
+                                    <li class="one"><a href="index.html">Home</a></li><!--
+                                 --><li class="two"><a href="about.html">About</a></li><!--
+                                 --><li class="three"><a href="work.html">Work</a></li><!--
+                                 --><li class="four"><a href="connect.html">Connect</a></li>
+                                </ul>
+                            </div>
+            </header>
+            <div id="home">
+                <h1>TIFF K LAU <span id="like">likes</span></h1>
+                <h1 id="designing">designing.</h1>
+                <p>INTERACTION DESIGNER &nbsp;&nbsp;|&nbsp;&nbsp; GRAPHIC DESIGNER</p>
+                <p>VANCOUVER, BC</p>
+                <figure> 
+                    <a href="#start" class="blink_me"><img src="images/arrow.png" alt="arrow" id="arrow" class="animated infinite bounce"></a>
+                </figure>
+            </div>
+            
+            <div id="start">
+                
+
+                <main id="homeMain">
+                    <h2>WHAT I DO BEST</h2>
+                    <hr id="best_underline">
+                    <div id="mainpage">
+                        <a href="uiux.html" class="service-1">
+                            <div>
+                                <img src="images/ui_icon.png" alt="ui_icon" />
+                                <p>User Interface</p>
+                                <p>Design</p>
+                            </div>
+                        </a>
+                        <a href="frontend.html" class="service-2">
+                            <div>
+                                <img src="images/device_icon.png" alt="devices_icon" />
+                                <p>Responsive Front-End</p>
+                                    <p>Development</p>
+                            </div>
+                        </a>
+                        <a href="uiux.html" class="service-1">
+                            <div>
+                                <img src="images/ux_icon.png" alt="ux_icon" />
+                                <p>User Experience</p>
+                            </div>
+                        </a>
+                        <a href="branding.html" class="service-2">
+                            <div>
+                                <img src="images/brand_icon.png" alt="brand_icon" />
+                                <p>Brand Identity</p>
+                            </div>
+                        </a>
+                    </div>
+                </main>
+            </div>
+            
+            <footer>
+                    <p>&copy; 2015 Tiff Lau. All Rights Reserved.</p>
+               <!-- <p id="email"><a href="mailto:tiff.k.lau@gmail.com">Email Me</a></p>  -->
+            </footer>
+            
+            
+        </div>
+    </body>
+
+
+<!--script!-->
+     <script>
+         
+        /* mobile menu */
+         $(document).ready(function(){
+                $("#menu-btn").click(function(){
+                    $("#pop").slideToggle("2500");
+                    $("#pop").addClass("pop-menu");
+                });
+            });
+
+     /* Text Swapper */
+            var designing_i = 0;
+            var designing_array = ["designing.","crafting.","traveling.","adventures.","basketball.","the Lakers.","black coffee.","toro sushi.","yam fries.","street fashion."];
+            var designing_elem;
+            function designingNext(){
+                designing_i++;
+                designing_elem.style.opacity = 0;
+                if(designing_i > (designing_array.length - 1)){
+                    designing_i = 0;
+                }
+                setTimeout('designingSlide()',1000);
+            }
+            function designingSlide(){
+                designing_elem.innerHTML = designing_array[designing_i];
+                designing_elem.style.opacity = 1;
+                setTimeout('designingNext()',2000);
+            }
+
+
+             designing_elem = document.getElementById("designing");
+        designingSlide();
+
+    /*   scroll   */
+    $(document).ready(function() {
+                $("#arrow").click(function (e) {
+                    e.preventDefault();
+                    $("#start").ScrollTo({
+                        duration: 500,
+                        easing: 'linear'
+                    });
+                });
+    });
+         
+    
+         /* What I Do Best slide in */
+        
+      /*   
+         $(document).ready(function(){
+             $(".service-1").addClass("hidden").viewportChecker({
+                 classToAdd: "visible animated fadeInLeft",
+                 offset:100
+             });
+             $(".service-2").addClass("hidden").viewportChecker({
+                 classToAdd: "visible animated fadeInRight",
+                 offset:100
+             });
+             $(".service-3").addClass("hidden").viewportChecker({
+                 classToAdd: "visible animated fadeInUp",
+                 offset:100
+             });
+         });
+       
+       */
+
+</script>
+    <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-61937159-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+
+</html>
